@@ -27,7 +27,7 @@ export default function GlassNavbar({
   logo,
   logoAlt = "Logo",
   items,
-  position = "sticky",
+  position = "fixed",
   mobileBreakpoint = "md",
   className = "",
 }: GlassNavbarProps) {
@@ -48,10 +48,12 @@ export default function GlassNavbar({
       <GlassSurface
         height={64}
         width="100%"
-        className={`${position} top-6 left-1/2 -translate-x-1/2 z-50 max-w-5xl px-4 ${className}`}
+        className={`${position} ${className} z-50`}
         borderRadius={18}
-        backgroundOpacity={0.12}
-        blur={14}
+        backgroundOpacity={0.05}
+        saturation={1}
+        brightness={50}
+        blur={12}
       >
         <nav className="w-full flex items-center justify-between">
           {/* LOGO */}
@@ -65,7 +67,7 @@ export default function GlassNavbar({
                 className="rounded-lg"
               />
             ) : (
-              <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-blue-500 rounded-lg flex items-center justify-center text-white font-bold">
+              <div className="w-10 h-10 bg-linear-to-br from-purple-500 to-blue-500 rounded-lg flex items-center justify-center text-white font-bold">
                 {logoText.charAt(0)}
               </div>
             )}

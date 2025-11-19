@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import LiquidEther from "@/components/LiquidEther";
-
+import GlassNavbar from "@/components/navbar";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -28,14 +28,25 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <GlassNavbar
+          logoText="Rafie"
+          items={[
+            { label: "Home", href: "/" },
+            { label: "Projects", href: "#projects" },
+            { label: "About", href: "#about" },
+            { label: "Contact", href: "#contact" },
+          ]}
+          position="sticky"
+          className="max-w-6xl m-auto top-6 z-50 backdrop-blur-sm mb-7"
+        />
         <div className="fixed inset-0 bg-black -z-10" />
         <LiquidEther
           colors={["#5227FF", "#FF9FFC", "#B19EEF"]}
           resolution={0.5}
           autoDemo={true}
           autoSpeed={0.5}
-          autoIntensity={2.2}
-          takeoverDuration={0.25}
+          autoIntensity={1}
+          takeoverDuration={0.05}
           autoResumeDelay={3000}
           autoRampDuration={0.6}
           style={{
@@ -44,7 +55,7 @@ export default function RootLayout({
             left: 0,
             width: "100vw",
             height: "100vh",
-            zIndex: 0,
+            zIndex: -1,
             pointerEvents: "none",
           }}
         />
