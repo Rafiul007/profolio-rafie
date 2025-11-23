@@ -15,6 +15,9 @@ import HeroMainSection from "@/components/section/hero-section";
 import TechStackSection from "@/components/section/tech-stack-section";
 import HeroDetailsSection from "@/components/section/heroo-details";
 import AboutMeSection from "@/components/section/about-me-section";
+import SkillsSection from "@/components/section/skill-section";
+import FeaturedProjectsSection from "@/components/section/project-section";
+import ContactSection from "@/components/section/contract.section";
 
 const techLogos = [
   {
@@ -71,6 +74,9 @@ export default function MinimalistHero() {
       <HeroDetailsSection />
       <TechStackSection logos={techLogos} showTitle={false} />
       <AboutMeSection />
+      <SkillsSection />
+      <FeaturedProjectsSection />
+      <ContactSection />
     </main>
   );
 }
