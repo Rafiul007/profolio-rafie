@@ -12,7 +12,10 @@ import {
   SiExpress as SiExpressJs,
 } from "react-icons/si";
 import { FaNodeJs } from "react-icons/fa";
-// Tech logos array - you'll need to provide the actual logo components or images
+import TypingText from "@/components/TypingText";
+import GradientText from "@/components/GradientText";
+import FadeIn from "@/components/FadeIn";
+
 const techLogos = [
   {
     node: <SiReact color="white" />,
@@ -61,70 +64,9 @@ const techLogos = [
   },
 ];
 
-function TypingText({ text, speed = 100 }) {
-  const [displayedText, setDisplayedText] = React.useState("");
-  const [currentIndex, setCurrentIndex] = React.useState(0);
-
-  useEffect(() => {
-    if (currentIndex < text.length) {
-      const timeout = setTimeout(() => {
-        setDisplayedText((prev) => prev + text[currentIndex]);
-        setCurrentIndex((prev) => prev + 1);
-      }, speed);
-      return () => clearTimeout(timeout);
-    }
-  }, [currentIndex, text, speed]);
-
-  return <span>{displayedText}</span>;
-}
-
-// Gradient Text Animation
-function GradientText({ children }) {
-  return (
-    <span className="bg-linear-to-r from-purple-400 via-pink-300 to-purple-400 bg-clip-text text-transparent animate-gradient bg-size-[200%_auto]">
-      {children}
-    </span>
-  );
-}
-
-// Fade In Animation Component
-function FadeIn({ children, delay = 0 }) {
-  const [isVisible, setIsVisible] = React.useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), delay);
-    return () => clearTimeout(timer);
-  }, [delay]);
-
-  return (
-    <div
-      className={`transition-all duration-1000 ${
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-      }`}
-    >
-      {children}
-    </div>
-  );
-}
-
 export default function MinimalistHero() {
   return (
     <main className="min-h-screen relative">
-      <style>{`
-        @keyframes gradient {
-          0% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-          100% { background-position: 0% 50%; }
-        }
-        .animate-gradient {
-          animation: gradient 3s ease infinite;
-        }
-        @keyframes fadeIn {
-          from { opacity: 0; transform: translateY(10px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-      `}</style>
-
       {/* Hero Section */}
       <section className="section-container pt-20 pb-20">
         <div className="space-y-12">
