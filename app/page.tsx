@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, ReactNode } from "react";
 import LogoLoop from "@/components/LogoLoop";
 import {
   SiReact,
@@ -126,7 +126,7 @@ export default function MinimalistHero() {
       `}</style>
 
       {/* Hero Section */}
-      <section className="max-w-6xl mx-auto px-6 pt-20 pb-20">
+      <section className="section-container pt-20 pb-20">
         <div className="space-y-12">
           {/* Main Content */}
           <div className="space-y-8">
@@ -157,7 +157,6 @@ export default function MinimalistHero() {
             </FadeIn>
           </div>
 
-          {/* Stats Grid */}
           <FadeIn delay={600}>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-8 border-t border-white/10">
               <div>
@@ -181,25 +180,6 @@ export default function MinimalistHero() {
             </div>
           </FadeIn>
 
-          {/* Tech Stack with Logo Loop */}
-          <FadeIn delay={800}>
-            <div className="pt-8">
-              <h3 className="text-4xl uppercase tracking-widest text-gray-300 mb-6">
-                Tech Stack
-              </h3>
-              <LogoLoop
-                logos={techLogos}
-                speed={120}
-                direction="left"
-                logoHeight={64}
-                gap={60}
-                hoverSpeed={100}
-                scaleOnHover
-              />
-            </div>
-          </FadeIn>
-
-          {/* CTA */}
           <FadeIn delay={1000}>
             <div className="flex gap-4 pt-4">
               <a
@@ -220,26 +200,22 @@ export default function MinimalistHero() {
             </div>
           </FadeIn>
         </div>
-
-        {/* Profile Image - Minimal */}
-        <FadeIn delay={1200}>
-          <div className="mt-20 max-w-sm">
-            <div className="aspect-square rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm flex items-center justify-center border border-white/10 overflow-hidden">
-              {/* Replace this div with your actual image */}
-              <div className="text-8xl font-light text-white/30">RF</div>
-              {/* Or use: <img src="/profile.png" alt="Rafie" className="w-full h-full object-cover" /> */}
-            </div>
-          </div>
-        </FadeIn>
       </section>
 
-      {/* Scroll Indicator */}
-      <FadeIn delay={1400}>
-        <div className="fixed bottom-8 left-1/2 -translate-x-1/2">
-          <div className="flex flex-col items-center gap-2 text-gray-400">
-            <span className="text-xs">Scroll</span>
-            <div className="w-px h-12 bg-gradient-to-b from-gray-400 to-transparent"></div>
-          </div>
+      <FadeIn delay={800}>
+        <div className="pt-8">
+          <h3 className="section-container text-4xl uppercase tracking-widest text-gray-300 mb-6">
+            Tech Stack
+          </h3>
+          <LogoLoop
+            logos={techLogos}
+            speed={120}
+            direction="left"
+            logoHeight={64}
+            gap={60}
+            hoverSpeed={100}
+            scaleOnHover
+          />
         </div>
       </FadeIn>
     </main>
