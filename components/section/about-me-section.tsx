@@ -7,7 +7,7 @@ import ScrollReveal from "../ScrollReveal";
 
 export default function AboutMeSection() {
   return (
-    <section className="max-w-[1400px] mx-auto px-6 py-32">
+    <section className="max-w-[1400px] mx-auto px-6 py-20" id="about">
       <div className="grid lg:grid-cols-2 gap-16 items-center">
         {/* Left Side */}
         <div className="space-y-8">
@@ -21,9 +21,11 @@ export default function AboutMeSection() {
           {/* ONE ScrollReveal for all paragraphs */}
           <ScrollReveal
             containerClassName="space-y-6"
-            textClassName="text-gray-300 text-[1.05rem] md:text-lg leading-relaxed"
-            blurStrength={4}
-            baseOpacity={0.2}
+            textClassName="text-gray-300 text-[1.05rem] md:text-2xl leading-relaxed"
+            baseOpacity={1}
+            enableBlur={true}
+            baseRotation={8}
+            blurStrength={12}
           >
             I&apos;m a passionate Full Stack Developer with a love for creating
             elegant and efficient web solutions. My journey began during my

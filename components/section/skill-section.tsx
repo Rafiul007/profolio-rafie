@@ -42,7 +42,7 @@ export default function SkillsSection() {
   ];
 
   return (
-    <section className="max-w-[1400px] mx-auto px-6 py-32">
+    <section className="max-w-[1400px] mx-auto px-6 py-20" id="skills">
       <h2 className="text-5xl md:text-6xl font-light text-white mb-4">
         Skills{" "}
         <span className="bg-linear-to-r from-purple-400 via-pink-300 to-purple-400 bg-clip-text text-transparent">

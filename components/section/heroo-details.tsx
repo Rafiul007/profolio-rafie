@@ -4,9 +4,9 @@ import FadeIn from "@/components/FadeIn";
 
 export default function HeroDetailsSection() {
   return (
-    <section className="section-container pb-20">
+    <section className="section-container pb-20 pt-2">
       <FadeIn delay={200}>
-        <div className="flex items-center gap-3 text-sm text-gray-400 mb-10">
+        <div className="flex items-center gap-3 text-sm text-gray-400 my-6">
           <span>Currently at</span>
           <span className="px-4 py-1.5 bg-white/5 backdrop-blur-sm text-white rounded-full border border-white/10">
             Hubar Tech Limited

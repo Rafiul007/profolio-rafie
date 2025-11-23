@@ -18,6 +18,8 @@ import AboutMeSection from "@/components/section/about-me-section";
 import SkillsSection from "@/components/section/skill-section";
 import FeaturedProjectsSection from "@/components/section/project-section";
 import ContactSection from "@/components/section/contract.section";
+import Footer from "@/components/Footer";
+import NewsletterSection from "@/components/section/newsletter-subscription";
 
 const techLogos = [
   {
@@ -76,7 +78,9 @@ export default function MinimalistHero() {
       <AboutMeSection />
       <SkillsSection />
       <FeaturedProjectsSection />
+      <NewsletterSection />
       <ContactSection />
+      <Footer />
     </main>
   );
 }

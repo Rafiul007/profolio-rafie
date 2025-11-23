@@ -7,7 +7,7 @@ export default function FeaturedProjectsSection() {
   const projects = [
     {
       title: "Portfolio Platform",
-      image: "/projects/project1.png",
+      image: "/e-commerce.png",
       description:
         "A modern personal portfolio built with Next.js, GSAP animations, and glassmorphism.",
       tech: ["Next.js", "TypeScript", "Tailwind", "GSAP"],
@@ -16,7 +16,7 @@ export default function FeaturedProjectsSection() {
     },
     {
       title: "E-Commerce Dashboard",
-      image: "/projects/project2.png",
+      image: "/e-commerce.png",
       description:
         "Admin dashboard with analytics, charts, and product management.",
       tech: ["React", "Prisma", "Node.js", "MongoDB"],
@@ -25,7 +25,7 @@ export default function FeaturedProjectsSection() {
     },
     {
       title: "AI Chat Interface",
-      image: "/projects/project3.png",
+      image: "/e-commerce.png",
       description:
         "Chat UI with streaming responses and intelligent UX interactions.",
       tech: ["Next.js", "OpenAI API", "Tailwind"],
@@ -35,7 +35,7 @@ export default function FeaturedProjectsSection() {
   ];
 
   return (
-    <section className="max-w-[1400px] mx-auto px-6 py-32">
+    <section className="max-w-[1400px] mx-auto px-6 py-20" id="projects">
       <h2 className="text-5xl md:text-6xl font-light text-white mb-4">
         Featured{" "}
         <span className="bg-linear-to-r from-purple-400 via-pink-300 to-purple-400 bg-clip-text text-transparent">

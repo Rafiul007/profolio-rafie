@@ -5,7 +5,7 @@ import { SiGithub, SiLinkedin, SiFacebook, SiInstagram } from "react-icons/si";
 
 export default function ContactSection() {
   return (
-    <section className="max-w-[1400px] mx-auto px-6 py-32">
+    <section className="max-w-[1400px] mx-auto px-6 py-20" id="contact">
       {/* Header */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
