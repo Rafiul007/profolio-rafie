@@ -13,6 +13,8 @@ import {
 import { FaNodeJs } from "react-icons/fa";
 import HeroMainSection from "@/components/section/hero-section";
 import TechStackSection from "@/components/section/tech-stack-section";
+import HeroDetailsSection from "@/components/section/heroo-details";
+import AboutMeSection from "@/components/section/about-me-section";
 
 const techLogos = [
   {
@@ -66,7 +68,9 @@ export default function MinimalistHero() {
   return (
     <main className="min-h-screen relative">
       <HeroMainSection />
-      <TechStackSection logos={techLogos} />
+      <HeroDetailsSection />
+      <TechStackSection logos={techLogos} showTitle={false} />
+      <AboutMeSection />
     </main>
   );
 }
