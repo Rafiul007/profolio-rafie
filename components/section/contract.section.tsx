@@ -91,7 +91,7 @@ export default function ContactSection() {
           <div className="flex gap-6">
             {/* GitHub */}
             <a
-              href="https://github.com/your-profile"
+              href="https://github.com/Rafiul007"
               target="_blank"
               rel="noopener noreferrer"
               className="p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-md text-gray-300 hover:text-white hover:bg-white/10 transition text-2xl"
@@ -101,7 +101,7 @@ export default function ContactSection() {
 
             {/* LinkedIn */}
             <a
-              href="https://linkedin.com/in/your-profile"
+              href="https://www.linkedin.com/in/rafiul007/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-md text-gray-300 hover:text-white hover:bg-white/10 transition text-2xl"
@@ -111,7 +111,7 @@ export default function ContactSection() {
 
             {/* Facebook */}
             <a
-              href="https://facebook.com/your-profile"
+              href="https://www.facebook.com/rafiul.faisal007"
               target="_blank"
               rel="noopener noreferrer"
               className="p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-md text-gray-300 hover:text-white hover:bg-white/10 transition text-2xl"
@@ -121,7 +121,7 @@ export default function ContactSection() {
 
             {/* Instagram */}
             <a
-              href="https://instagram.com/your-profile"
+              href="https://www.instagram.com/being_rafie/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-md text-gray-300 hover:text-white hover:bg-white/10 transition text-2xl"
