@@ -35,7 +35,7 @@ export default function Footer() {
         {/* Right - Social */}
         <div className="flex gap-4">
           <a
-            href="https://github.com/your-profile"
+            href="https://github.com/Rafie007"
             target="_blank"
             className="p-3 rounded-xl bg-white/5 border border-white/10 text-gray-300 hover:text-white hover:bg-white/10 transition text-xl"
           >
@@ -43,7 +43,7 @@ export default function Footer() {
           </a>
 
           <a
-            href="https://linkedin.com/in/your-profile"
+            href="https://linkedin.com/in/Rafie007"
             target="_blank"
             className="p-3 rounded-xl bg-white/5 border border-white/10 text-gray-300 hover:text-white hover:bg-white/10 transition text-xl"
           >
@@ -51,7 +51,7 @@ export default function Footer() {
           </a>
 
           <a
-            href="https://facebook.com/your-profile"
+            href="https://www.facebook.com/rafiul.faisal007"
             target="_blank"
             className="p-3 rounded-xl bg-white/5 border border-white/10 text-gray-300 hover:text-white hover:bg-white/10 transition text-xl"
           >
@@ -59,7 +59,7 @@ export default function Footer() {
           </a>
 
           <a
-            href="https://instagram.com/your-profile"
+            href="https://www.instagram.com/being_rafie/"
             target="_blank"
             className="p-3 rounded-xl bg-white/5 border border-white/10 text-gray-300 hover:text-white hover:bg-white/10 transition text-xl"
           >
