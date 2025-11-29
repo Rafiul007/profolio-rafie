@@ -35,7 +35,7 @@ export default function Footer() {
         {/* Right - Social */}
         <div className="flex gap-4">
           <a
-            href="https://github.com/Rafie007"
+            href="https://github.com/Rafiul007"
             target="_blank"
             className="p-3 rounded-xl bg-white/5 border border-white/10 text-gray-300 hover:text-white hover:bg-white/10 transition text-xl"
           >
@@ -43,7 +43,7 @@ export default function Footer() {
           </a>
 
           <a
-            href="https://linkedin.com/in/Rafie007"
+            href="https://www.linkedin.com/in/rafiul007/"
             target="_blank"
             className="p-3 rounded-xl bg-white/5 border border-white/10 text-gray-300 hover:text-white hover:bg-white/10 transition text-xl"
           >
