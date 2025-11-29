@@ -68,7 +68,7 @@ const techLogos = [
 
 export default function HeroMainSection() {
   return (
-    <section className="section-container">
+    <section className="section-container " id="home">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div className="space-y-8">
           <FadeIn>

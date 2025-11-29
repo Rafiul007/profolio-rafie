@@ -1,6 +1,11 @@
-import { useEffect, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 
-export function FadeIn({ children, delay = 0 }) {
+type FadeInProps = {
+  children: ReactNode;
+  delay?: number;
+};
+
+export function FadeIn({ children, delay = 0 }: FadeInProps) {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
