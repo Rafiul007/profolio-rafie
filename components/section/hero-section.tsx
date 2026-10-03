@@ -81,7 +81,7 @@ export default function HeroMainSection() {
             <div className="max-w-2xl">
               <p className="text-xl md:text-2xl text-gray-300 font-light leading-relaxed">
                 <TypingText
-                  text="Software Engineer crafting elegant web experiences with modern technologies."
+                  text="Full Stack Engineer building scalable web apps with React, Next.js, Node.js, and TypeScript."
                   speed={50}
                 />
               </p>

@@ -144,7 +144,7 @@ export default function GlassNavbar({
           {/* Optional: Add social links or additional info */}
           <div className="mt-auto pb-8 pt-8 border-t border-white/10">
             <p className="text-gray-400 text-sm text-center">
-              © 2024 {logoText}
+              © {new Date().getFullYear()} {logoText}
             </p>
           </div>
         </div>

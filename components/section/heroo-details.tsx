@@ -6,8 +6,11 @@ export default function HeroDetailsSection() {
   return (
     <section className="section-container pb-20 pt-2">
       <FadeIn delay={200}>
-        <div className="flex items-center gap-3 text-sm text-gray-400 my-6">
+        <div className="flex flex-wrap items-center gap-3 text-sm text-gray-400 my-6">
           <span>Currently at</span>
+          <span className="px-4 py-1.5 bg-white/5 backdrop-blur-sm text-white rounded-full border border-white/10">
+            GetOnNet AS
+          </span>
           <span className="px-4 py-1.5 bg-white/5 backdrop-blur-sm text-white rounded-full border border-white/10">
             Hubar Tech Limited
           </span>
@@ -17,18 +20,18 @@ export default function HeroDetailsSection() {
       <FadeIn delay={400}>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-8 border-t border-white/10">
           <div>
-            <div className="text-3xl font-light text-white mb-1">1+</div>
-            <div className="text-sm text-gray-400">Years Experience</div>
+            <div className="text-3xl font-light text-white mb-1">3</div>
+            <div className="text-sm text-gray-400">Years Building Software</div>
+          </div>
+
+          <div>
+            <div className="text-3xl font-light text-white mb-1">3</div>
+            <div className="text-sm text-gray-400">Companies</div>
           </div>
 
           <div>
             <div className="text-3xl font-light text-white mb-1">2024</div>
-            <div className="text-sm text-gray-400">CSE Graduate</div>
-          </div>
-
-          <div>
-            <div className="text-3xl font-light text-white mb-1">DIU</div>
-            <div className="text-sm text-gray-400">University</div>
+            <div className="text-sm text-gray-400">CSE Graduate, DIU</div>
           </div>
 
           <div>

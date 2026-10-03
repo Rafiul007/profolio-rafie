@@ -6,31 +6,27 @@ import ProjectCard from "../ProjectCard";
 export default function FeaturedProjectsSection() {
   const projects = [
     {
-      title: "Portfolio Platform",
+      title: "ShadhinShop: POS + E-commerce",
       image: "/e-commerce.png",
       description:
-        "A modern personal portfolio built with Next.js, GSAP animations, and glassmorphism.",
-      tech: ["Next.js", "TypeScript", "Tailwind", "GSAP"],
-      link: "https://example.com",
-      github: "https://github.com/example",
+        "A POS and e-commerce platform on a microservice backend, designed to grow into POS, CRM, and wholesaler applications.",
+      tech: ["Next.js", "Express.js", "MongoDB", "Redis", "Zustand", "TanStack Query"],
     },
     {
-      title: "E-Commerce Dashboard",
+      title: "Zipifly",
       image: "/e-commerce.png",
       description:
-        "Admin dashboard with analytics, charts, and product management.",
-      tech: ["React", "Prisma", "Node.js", "MongoDB"],
-      link: "https://example.com",
-      github: "https://github.com/example",
+        "Final year project: a secure, anonymous parcel delivery system focused on privacy and efficient last-mile delivery.",
+      tech: ["Full Stack", "Security", "Logistics"],
     },
     {
-      title: "AI Chat Interface",
+      title: "Portfolio Website",
       image: "/e-commerce.png",
       description:
-        "Chat UI with streaming responses and intelligent UX interactions.",
-      tech: ["Next.js", "OpenAI API", "Tailwind"],
-      link: "https://example.com",
-      github: "https://github.com/example",
+        "This site: a personal portfolio built with Next.js, GSAP and Three.js animations, and a glassmorphism UI.",
+      tech: ["Next.js", "TypeScript", "Tailwind", "GSAP", "Three.js"],
+      link: "https://rafie007.vercel.app/",
+      github: "https://github.com/Rafiul007/profolio-rafie",
     },
   ];
 

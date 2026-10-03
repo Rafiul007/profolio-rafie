@@ -9,8 +9,8 @@ type ProjectCardProps = {
   image: string;
   description: string;
   tech: string[];
-  link: string;
-  github: string;
+  link?: string;
+  github?: string;
   index: number;
 };
 
@@ -60,19 +60,31 @@ export default function ProjectCard({
           </div>
 
           <div className="flex gap-4 pt-3">
-            {/* Instead of real links → open modal */}
-            <button
-              onClick={() => setOpen(true)}
-              className="text-purple-300 text-sm hover:underline"
-            >
-              Live →
-            </button>
-            <button
-              onClick={() => setOpen(true)}
-              className="text-purple-300 text-sm hover:underline"
-            >
-              GitHub →
-            </button>
+            {/* Real links when available, otherwise "Coming Soon" modal */}
+            {[
+              { label: "Live", href: link },
+              { label: "GitHub", href: github },
+            ].map(({ label, href }) =>
+              href ? (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-purple-300 text-sm hover:underline"
+                >
+                  {label} →
+                </a>
+              ) : (
+                <button
+                  key={label}
+                  onClick={() => setOpen(true)}
+                  className="text-purple-300 text-sm hover:underline"
+                >
+                  {label} →
+                </button>
+              )
+            )}
           </div>
         </div>
       </motion.div>

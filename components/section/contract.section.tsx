@@ -4,6 +4,18 @@ import { motion } from "framer-motion";
 import { SiGithub, SiLinkedin, SiFacebook, SiInstagram } from "react-icons/si";
 
 export default function ContactSection() {
+  // No backend: open the visitor's mail client with the message pre-filled
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const data = new FormData(e.currentTarget);
+    const name = String(data.get("name") ?? "");
+    const email = String(data.get("email") ?? "");
+    const message = String(data.get("message") ?? "");
+    const subject = encodeURIComponent(`Portfolio contact from ${name}`);
+    const body = encodeURIComponent(`${message}\n\n${name} (${email})`);
+    window.location.href = `mailto:rafiul.faisal@gmail.com?subject=${subject}&body=${body}`;
+  };
+
   return (
     <section className="max-w-[1400px] mx-auto px-6 py-20" id="contact">
       {/* Header */}
@@ -24,10 +36,10 @@ export default function ContactSection() {
 
         {/* Email */}
         <a
-          href="mailto:your@email.com"
+          href="mailto:rafiul.faisal@gmail.com"
           className="mt-6 inline-block text-gray-300 hover:text-white transition-colors text-lg"
         >
-          your@email.com
+          rafiul.faisal@gmail.com
         </a>
       </motion.div>
 
@@ -38,6 +50,7 @@ export default function ContactSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.15 }}
           viewport={{ once: true }}
+          onSubmit={handleSubmit}
           className="space-y-6 bg-white/5 backdrop-blur-lg border border-white/10 p-8 rounded-2xl"
         >
           <div>
@@ -46,6 +59,8 @@ export default function ContactSection() {
             </label>
             <input
               type="text"
+              name="name"
+              required
               className="w-full bg-white/5 border border-white/10 text-white rounded-xl px-4 py-3 outline-none focus:border-purple-400 transition"
               placeholder="Enter your name"
             />
@@ -57,6 +72,8 @@ export default function ContactSection() {
             </label>
             <input
               type="email"
+              name="email"
+              required
               className="w-full bg-white/5 border border-white/10 text-white rounded-xl px-4 py-3 outline-none focus:border-purple-400 transition"
               placeholder="Enter your email"
             />
@@ -65,6 +82,8 @@ export default function ContactSection() {
           <div>
             <label className="text-sm text-gray-300 block mb-2">Message</label>
             <textarea
+              name="message"
+              required
               className="w-full bg-white/5 border border-white/10 text-white rounded-xl px-4 py-3 h-32 resize-none outline-none focus:border-pink-400 transition"
               placeholder="Write your message..."
             ></textarea>

@@ -6,11 +6,26 @@ import {
   SiNextdotjs,
   SiTypescript,
   SiTailwindcss,
+  SiRedux,
+  SiMui,
+  SiReactquery,
+  SiNestjs,
+  SiExpress,
+  SiSocketdotio,
   SiPrisma,
+  SiPostgresql,
+  SiMysql,
   SiMongodb,
+  SiRedis,
+  SiCypress,
+  SiMocha,
+  SiPostman,
+  SiHubspot,
   SiDocker,
   SiGithub,
+  SiJira,
 } from "react-icons/si";
+import { LuLayoutTemplate } from "react-icons/lu";
 
 export default function SkillsSection() {
   const categories = [
@@ -21,15 +36,44 @@ export default function SkillsSection() {
         { name: "Next.js", icon: <SiNextdotjs /> },
         { name: "TypeScript", icon: <SiTypescript /> },
         { name: "Tailwind CSS", icon: <SiTailwindcss /> },
+        { name: "Redux", icon: <SiRedux /> },
+        { name: "Material UI", icon: <SiMui /> },
+        { name: "TanStack Query", icon: <SiReactquery /> },
+        { name: "React Native", icon: <FaReact /> },
       ],
     },
     {
       title: "Backend",
       skills: [
         { name: "Node.js", icon: <FaNodeJs /> },
+        { name: "NestJS", icon: <SiNestjs /> },
+        { name: "Express.js", icon: <SiExpress /> },
+        { name: "Socket.io", icon: <SiSocketdotio /> },
         { name: "Prisma", icon: <SiPrisma /> },
+      ],
+    },
+    {
+      title: "Databases",
+      skills: [
+        { name: "PostgreSQL", icon: <SiPostgresql /> },
+        { name: "MySQL", icon: <SiMysql /> },
         { name: "MongoDB", icon: <SiMongodb /> },
-        { name: "Docker", icon: <SiDocker /> },
+        { name: "Redis", icon: <SiRedis /> },
+      ],
+    },
+    {
+      title: "Testing",
+      skills: [
+        { name: "Cypress", icon: <SiCypress /> },
+        { name: "Mocha", icon: <SiMocha /> },
+        { name: "Postman", icon: <SiPostman /> },
+      ],
+    },
+    {
+      title: "CMS & Integrations",
+      skills: [
+        { name: "Sitevision CMS", icon: <LuLayoutTemplate /> },
+        { name: "HubSpot", icon: <SiHubspot /> },
       ],
     },
     {
@@ -37,6 +81,8 @@ export default function SkillsSection() {
       skills: [
         { name: "Git", icon: <FaGitAlt /> },
         { name: "GitHub", icon: <SiGithub /> },
+        { name: "Docker", icon: <SiDocker /> },
+        { name: "Jira", icon: <SiJira /> },
       ],
     },
   ];

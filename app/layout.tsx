@@ -14,8 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Rafie007",
-  description: "Portfolio website of Rafie007 showcasing projects and skills.",
+  title: "M Rafiul Faisal | Full Stack Engineer",
+  description:
+    "Portfolio of M Rafiul Faisal (Rafie007), a Full Stack Engineer working with React, Next.js, Node.js, NestJS, and TypeScript.",
 };
 
 export default function RootLayout({
@@ -32,8 +33,9 @@ export default function RootLayout({
           logoText="Rafie"
           items={[
             { label: "Home", href: "/" },
-            { label: "Projects", href: "#projects" },
             { label: "About", href: "#about" },
+            { label: "Experience", href: "#experience" },
+            { label: "Projects", href: "#projects" },
             { label: "Contact", href: "#contact" },
           ]}
           position="sticky"

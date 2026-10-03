@@ -1,12 +1,14 @@
 "use client";
-import LogoLoop from "@/components/LogoLoop";
 import {
   SiReact,
   SiNextdotjs,
   SiTypescript,
   SiTailwindcss,
-  SiPrisma,
-  SiGraphql,
+  SiNestjs,
+  SiPostgresql,
+  SiMongodb,
+  SiRedis,
+  SiRedux,
   SiDocker,
   SiExpress as SiExpressJs,
 } from "react-icons/si";
@@ -15,6 +17,7 @@ import HeroMainSection from "@/components/section/hero-section";
 import TechStackSection from "@/components/section/tech-stack-section";
 import HeroDetailsSection from "@/components/section/heroo-details";
 import AboutMeSection from "@/components/section/about-me-section";
+import ExperienceSection from "@/components/section/experience-section";
 import SkillsSection from "@/components/section/skill-section";
 import FeaturedProjectsSection from "@/components/section/project-section";
 import ContactSection from "@/components/section/contract.section";
@@ -43,9 +46,19 @@ const techLogos = [
     href: "https://tailwindcss.com",
   },
   {
+    node: <SiRedux color="white" />,
+    title: "Redux",
+    href: "https://redux.js.org",
+  },
+  {
     node: <FaNodeJs color="white" />,
     title: "Node.js",
     href: "https://nodejs.org",
+  },
+  {
+    node: <SiNestjs color="white" />,
+    title: "NestJS",
+    href: "https://nestjs.com",
   },
   {
     node: <SiExpressJs color="white" />,
@@ -53,14 +66,19 @@ const techLogos = [
     href: "https://expressjs.com",
   },
   {
-    node: <SiPrisma color="white" />,
-    title: "Prisma",
-    href: "https://www.prisma.io",
+    node: <SiPostgresql color="white" />,
+    title: "PostgreSQL",
+    href: "https://www.postgresql.org",
   },
   {
-    node: <SiGraphql color="white" />,
-    title: "GraphQL",
-    href: "https://graphql.org",
+    node: <SiMongodb color="white" />,
+    title: "MongoDB",
+    href: "https://www.mongodb.com",
+  },
+  {
+    node: <SiRedis color="white" />,
+    title: "Redis",
+    href: "https://redis.io",
   },
   {
     node: <SiDocker color="white" />,
@@ -76,6 +94,7 @@ export default function MinimalistHero() {
       <HeroDetailsSection />
       <TechStackSection logos={techLogos} showTitle={false} />
       <AboutMeSection />
+      <ExperienceSection />
       <SkillsSection />
       <FeaturedProjectsSection />
       <NewsletterSection />

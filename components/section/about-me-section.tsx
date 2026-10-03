@@ -27,12 +27,13 @@ export default function AboutMeSection() {
             baseRotation={8}
             blurStrength={12}
           >
-            I&apos;m a passionate Full Stack Developer with a love for creating
-            elegant and efficient web solutions. My journey began during my
-            Computer Science studies at Daffodil International University. I
-            specialize in React, Next.js, TypeScript, and enjoy building
-            delightful user experiences. When I&apos;m not coding, I explore new
-            tech, contribute to open-source, and help fellow developers.
+            I&apos;m a Full Stack Engineer with nearly 3 years of development
+            experience, building products for clients in the UK, Norway, and
+            Sweden. I work mostly with React, Next.js, TypeScript, and Node.js,
+            and I&apos;m going deeper into backend work with NestJS,
+            microservices, and databases. I graduated in Computer Science from
+            Daffodil International University and I&apos;m now pursuing an MS in
+            Management Information Systems.
           </ScrollReveal>
 
           <FadeInWhenVisible delay={0.4}>
