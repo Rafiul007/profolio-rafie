@@ -158,6 +158,50 @@
 }
 
 .animate-gradient {
-  animation: gradient 3s ease infinite;
+  animation: gradient 8s ease-in-out infinite;
   background-size: 200% auto;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem; /* anchor targets clear the floating navbar */
+}
+
+/* Only on body: it propagates to the viewport, so the sticky navbar keeps working */
+body {
+  overflow-x: clip; /* 100vw background + logo loop would otherwise scroll sideways */
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "ss01", "cv11";
+}
+
+::selection {
+  background: rgb(192 132 252 / 0.35);
+  color: white;
+}
+
+:focus-visible {
+  outline: 2px solid rgb(216 180 254 / 0.8);
+  outline-offset: 3px;
+  border-radius: 0.75rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-gradient,
+  .animate-fade-in {
+    animation: none;
+  }
+}
+
+/* Frost glass surfaces solid when transparency is reduced */
+@media (prefers-reduced-transparency: reduce) {
+  [class*="backdrop-blur"] {
+    backdrop-filter: none !important;
+    background-color: rgb(18 18 22 / 0.96) !important;
+  }
 }

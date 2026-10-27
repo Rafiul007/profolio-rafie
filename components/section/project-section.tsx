@@ -2,9 +2,36 @@
 "use client";
 
 import ProjectCard from "../ProjectCard";
+import SectionHeading from "../SectionHeading";
 
 export default function FeaturedProjectsSection() {
-  const projects = [
+  const projects: {
+    title: string;
+    image: string;
+    description: string;
+    tech: string[];
+    link?: string;
+    github?: string;
+    client?: boolean;
+  }[] = [
+    {
+      title: "Somahaar: Handloom E-commerce",
+      image: "/somahaar.jpg",
+      description:
+        "A bilingual (Bangla/English) online store for handloom lungis, gamchas, and panjabis sourced directly from weavers in Tangail and Sirajganj, with nationwide cash on delivery.",
+      tech: ["Next.js", "E-commerce", "Bangla / English"],
+      link: "https://www.somahaar.com/",
+      client: true,
+    },
+    {
+      title: "Sultan Overseas",
+      image: "/sultan-overseas.jpg",
+      description:
+        "Website for a government-licensed (RL 906) overseas recruitment agency in Bangladesh, presenting its services, destination countries, gallery, and contact channels.",
+      tech: ["React", "Responsive UI", "SEO"],
+      link: "https://www.sultanoverseas.org/",
+      client: true,
+    },
     {
       title: "ShadhinShop: POS + E-commerce",
       image: "/e-commerce.png",
@@ -32,16 +59,9 @@ export default function FeaturedProjectsSection() {
 
   return (
     <section className="max-w-[1400px] mx-auto px-6 py-20" id="projects">
-      <h2 className="text-5xl md:text-6xl font-light text-white mb-4">
-        Featured{" "}
-        <span className="bg-linear-to-r from-purple-400 via-pink-300 to-purple-400 bg-clip-text text-transparent">
-          Projects
-        </span>
-      </h2>
+      <SectionHeading eyebrow="Selected work" title="Featured" highlight="Projects" className="mb-16" />
 
-      <div className="w-20 h-1 bg-linear-to-r from-purple-400 to-pink-400 rounded-full mb-16"></div>
-
-      <div className="grid md:grid-cols-3 gap-12">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
         {projects.map((p, idx) => (
           <ProjectCard
             key={idx}
@@ -52,6 +72,7 @@ export default function FeaturedProjectsSection() {
             tech={p.tech}
             link={p.link}
             github={p.github}
+            client={p.client}
           />
         ))}
       </div>

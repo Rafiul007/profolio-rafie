@@ -72,7 +72,7 @@ export default function HeroMainSection() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div className="space-y-8">
           <FadeIn>
-            <h1 className="text-7xl md:text-9xl font-light tracking-tight text-white leading-[0.9]">
+            <h1 className="text-7xl md:text-9xl font-light tracking-[-0.045em] text-white leading-[0.9]">
               M Rafiul <GradientText>Faisal</GradientText>
             </h1>
           </FadeIn>

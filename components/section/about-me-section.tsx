@@ -2,7 +2,7 @@
 "use client";
 
 import FadeInWhenVisible from "../FadeInWhenVisible";
-import GradientText from "../GradientText";
+import SectionHeading from "../SectionHeading";
 import ScrollReveal from "../ScrollReveal";
 
 export default function AboutMeSection() {
@@ -11,12 +11,7 @@ export default function AboutMeSection() {
       <div className="grid lg:grid-cols-2 gap-16 items-center">
         {/* Left Side */}
         <div className="space-y-8">
-          <FadeInWhenVisible>
-            <h2 className="text-5xl md:text-6xl font-light text-white mb-4">
-              About <GradientText>Me</GradientText>
-            </h2>
-            <div className="w-20 h-1 bg-linear-to-r from-purple-400 to-pink-400 rounded-full"></div>
-          </FadeInWhenVisible>
+          <SectionHeading eyebrow="Introduction" title="About" highlight="Me" />
 
           {/* ONE ScrollReveal for all paragraphs */}
           <ScrollReveal

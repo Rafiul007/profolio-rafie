@@ -1,24 +1,27 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
+import { inViewOnce, reveal, spring } from "@/lib/motion";
 
+// Scroll entrance: plays once when the element enters the viewport.
 export default function FadeInWhenVisible({
   children,
   delay = 0,
+  className,
 }: {
   children: React.ReactNode;
+  /** Delay in seconds */
   delay?: number;
+  className?: string;
 }) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
-
   return (
     <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 50 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-      transition={{ duration: 0.8, delay }}
+      className={className}
+      variants={reveal}
+      initial="hidden"
+      whileInView="visible"
+      viewport={inViewOnce}
+      transition={{ ...spring, delay }}
     >
       {children}
     </motion.div>

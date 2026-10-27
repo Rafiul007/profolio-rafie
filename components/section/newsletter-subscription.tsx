@@ -1,14 +1,15 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { spring } from "@/lib/motion";
 
 export default function NewsletterSection() {
   return (
     <section className="w-full py-20 bg-gradient-to-r from-purple-600/30 via-pink-500/20 to-purple-700/30">
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7 }}
+        initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
+        whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+        transition={spring}
         viewport={{ once: true }}
         className="max-w-[900px] mx-auto px-6 text-center"
       >
@@ -41,7 +42,7 @@ export default function NewsletterSection() {
 
             <button
               type="submit"
-              className="w-full md:w-auto px-6 py-3 rounded-xl bg-gradient-to-r from-purple-400 to-pink-400 text-black font-medium hover:opacity-90 transition"
+              className="w-full md:w-auto px-6 py-3 rounded-xl bg-gradient-to-r from-purple-400 to-pink-400 text-black font-medium hover:opacity-90 active:scale-[0.98] transition-[transform,opacity] duration-150 ease-out"
             >
               Subscribe
             </button>
