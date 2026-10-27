@@ -1,26 +1,28 @@
-import { ReactNode, useEffect, useState } from "react";
+"use client";
+
+import { motion } from "framer-motion";
+import { ReactNode } from "react";
+import { reveal, spring } from "@/lib/motion";
 
 type FadeInProps = {
   children: ReactNode;
+  /** Delay in milliseconds */
   delay?: number;
+  className?: string;
 };
 
-export function FadeIn({ children, delay = 0 }: FadeInProps) {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), delay);
-    return () => clearTimeout(timer);
-  }, [delay]);
-
+// Above-the-fold entrance: plays on mount.
+export function FadeIn({ children, delay = 0, className }: FadeInProps) {
   return (
-    <div
-      className={`transition-all duration-1000 ${
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-      }`}
+    <motion.div
+      className={className}
+      variants={reveal}
+      initial="hidden"
+      animate="visible"
+      transition={{ ...spring, delay: delay / 1000 }}
     >
       {children}
-    </div>
+    </motion.div>
   );
 }
 

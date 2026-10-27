@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import LiquidEther from "@/components/LiquidEther";
 import GlassNavbar from "@/components/navbar";
+import MotionProvider from "@/components/MotionProvider";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -29,6 +30,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <MotionProvider>
         <GlassNavbar
           logoText="Rafie"
           items={[
@@ -39,7 +41,7 @@ export default function RootLayout({
             { label: "Contact", href: "#contact" },
           ]}
           position="sticky"
-          className="max-w-6xl m-auto top-6 z-50 backdrop-blur-sm mb-7"
+          className="max-w-6xl m-auto top-2 z-50 mb-7"
         />
         <div className="fixed inset-0 bg-black -z-10" />
         <LiquidEther
@@ -62,6 +64,7 @@ export default function RootLayout({
           }}
         />
         {children}
+        </MotionProvider>
       </body>
     </html>
   );
