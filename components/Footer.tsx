@@ -17,7 +17,10 @@ export default function Footer() {
         </div>
 
         {/* Center - Nav */}
-        <div className="flex gap-8 text-gray-300 text-sm">
+        <div className="flex flex-wrap justify-center gap-x-8 gap-y-2 text-gray-300 text-sm">
+          <a href="#experience" className="hover:text-white transition">
+            Experience
+          </a>
           <a href="#projects" className="hover:text-white transition">
             Projects
           </a>

@@ -2,50 +2,66 @@
 "use client";
 
 import ProjectCard from "../ProjectCard";
+import SectionHeading from "../SectionHeading";
 
 export default function FeaturedProjectsSection() {
-  const projects = [
+  const projects: {
+    title: string;
+    image: string;
+    description: string;
+    tech: string[];
+    link?: string;
+    github?: string;
+    client?: boolean;
+  }[] = [
     {
-      title: "Portfolio Platform",
-      image: "/e-commerce.png",
+      title: "Somahaar: Handloom E-commerce",
+      image: "/somahaar.jpg",
       description:
-        "A modern personal portfolio built with Next.js, GSAP animations, and glassmorphism.",
-      tech: ["Next.js", "TypeScript", "Tailwind", "GSAP"],
-      link: "https://example.com",
-      github: "https://github.com/example",
+        "A bilingual (Bangla/English) online store for handloom lungis, gamchas, and panjabis sourced directly from weavers in Tangail and Sirajganj, with nationwide cash on delivery.",
+      tech: ["Next.js", "E-commerce", "Bangla / English"],
+      link: "https://www.somahaar.com/",
+      client: true,
     },
     {
-      title: "E-Commerce Dashboard",
-      image: "/e-commerce.png",
+      title: "Sultan Overseas",
+      image: "/sultan-overseas.jpg",
       description:
-        "Admin dashboard with analytics, charts, and product management.",
-      tech: ["React", "Prisma", "Node.js", "MongoDB"],
-      link: "https://example.com",
-      github: "https://github.com/example",
+        "Website for a government-licensed (RL 906) overseas recruitment agency in Bangladesh, presenting its services, destination countries, gallery, and contact channels.",
+      tech: ["React", "Responsive UI", "SEO"],
+      link: "https://www.sultanoverseas.org/",
+      client: true,
     },
     {
-      title: "AI Chat Interface",
+      title: "ShadhinShop: POS + E-commerce",
       image: "/e-commerce.png",
       description:
-        "Chat UI with streaming responses and intelligent UX interactions.",
-      tech: ["Next.js", "OpenAI API", "Tailwind"],
-      link: "https://example.com",
-      github: "https://github.com/example",
+        "A POS and e-commerce platform on a microservice backend, designed to grow into POS, CRM, and wholesaler applications.",
+      tech: ["Next.js", "Express.js", "MongoDB", "Redis", "Zustand", "TanStack Query"],
+    },
+    {
+      title: "Zipifly",
+      image: "/e-commerce.png",
+      description:
+        "Final year project: a secure, anonymous parcel delivery system focused on privacy and efficient last-mile delivery.",
+      tech: ["Full Stack", "Security", "Logistics"],
+    },
+    {
+      title: "Portfolio Website",
+      image: "/e-commerce.png",
+      description:
+        "This site: a personal portfolio built with Next.js, GSAP and Three.js animations, and a glassmorphism UI.",
+      tech: ["Next.js", "TypeScript", "Tailwind", "GSAP", "Three.js"],
+      link: "https://rafie007.vercel.app/",
+      github: "https://github.com/Rafiul007/profolio-rafie",
     },
   ];
 
   return (
     <section className="max-w-[1400px] mx-auto px-6 py-20" id="projects">
-      <h2 className="text-5xl md:text-6xl font-light text-white mb-4">
-        Featured{" "}
-        <span className="bg-linear-to-r from-purple-400 via-pink-300 to-purple-400 bg-clip-text text-transparent">
-          Projects
-        </span>
-      </h2>
+      <SectionHeading eyebrow="Selected work" title="Featured" highlight="Projects" className="mb-16" />
 
-      <div className="w-20 h-1 bg-linear-to-r from-purple-400 to-pink-400 rounded-full mb-16"></div>
-
-      <div className="grid md:grid-cols-3 gap-12">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
         {projects.map((p, idx) => (
           <ProjectCard
             key={idx}
@@ -56,6 +72,7 @@ export default function FeaturedProjectsSection() {
             tech={p.tech}
             link={p.link}
             github={p.github}
+            client={p.client}
           />
         ))}
       </div>

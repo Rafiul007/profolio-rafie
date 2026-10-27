@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import LiquidEther from "@/components/LiquidEther";
 import GlassNavbar from "@/components/navbar";
+import MotionProvider from "@/components/MotionProvider";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -14,8 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Rafie007",
-  description: "Portfolio website of Rafie007 showcasing projects and skills.",
+  title: "M Rafiul Faisal | Full Stack Engineer",
+  description:
+    "Portfolio of M Rafiul Faisal (Rafie007), a Full Stack Engineer working with React, Next.js, Node.js, NestJS, and TypeScript.",
 };
 
 export default function RootLayout({
@@ -28,16 +30,18 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <MotionProvider>
         <GlassNavbar
           logoText="Rafie"
           items={[
             { label: "Home", href: "/" },
-            { label: "Projects", href: "#projects" },
             { label: "About", href: "#about" },
+            { label: "Experience", href: "#experience" },
+            { label: "Projects", href: "#projects" },
             { label: "Contact", href: "#contact" },
           ]}
           position="sticky"
-          className="max-w-6xl m-auto top-6 z-50 backdrop-blur-sm mb-7"
+          className="max-w-6xl m-auto top-2 z-50 mb-7"
         />
         <div className="fixed inset-0 bg-black -z-10" />
         <LiquidEther
@@ -60,6 +64,7 @@ export default function RootLayout({
           }}
         />
         {children}
+        </MotionProvider>
       </body>
     </html>
   );
