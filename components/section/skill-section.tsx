@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import SectionHeading from "../SectionHeading";
+import Spotlight from "../Spotlight";
 import { inViewOnce, reveal, spring, springSoft } from "@/lib/motion";
 import { FaReact, FaNodeJs, FaGitAlt } from "react-icons/fa";
 import {
@@ -103,8 +104,9 @@ export default function SkillsSection() {
             viewport={inViewOnce}
             whileHover={{ y: -4, transition: springSoft }}
             transition={{ ...spring, delay: (idx % 3) * 0.08 }}
-            className="p-8 rounded-3xl bg-white/[0.04] backdrop-blur-xl backdrop-saturate-150 border border-white/10 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] hover:bg-white/[0.07] hover:border-white/20 transition-colors duration-300"
+            className="group relative overflow-hidden p-8 rounded-3xl bg-white/[0.04] backdrop-blur-xl backdrop-saturate-150 border border-white/10 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] hover:bg-white/[0.07] hover:border-white/20 transition-colors duration-300"
           >
+            <Spotlight />
             <h3 className="text-2xl font-light tracking-[-0.02em] text-white mb-6">{cat.title}</h3>
 
             <div className="grid grid-cols-2 gap-6">

@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { motion, useScroll, useSpring } from "framer-motion";
 import SectionHeading from "../SectionHeading";
+import Spotlight from "../Spotlight";
 import { inViewOnce, reveal, spring, springSoft } from "@/lib/motion";
 
 type Experience = {
@@ -107,6 +108,7 @@ export default function ExperienceSection() {
               transition={springSoft}
               className="group relative overflow-hidden p-6 md:p-8 rounded-3xl bg-white/[0.04] backdrop-blur-xl backdrop-saturate-150 border border-white/10 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] transition-colors duration-300 hover:bg-white/[0.07] hover:border-white/20"
             >
+              <Spotlight />
               {/* Light that catches the top edge of the material */}
               <div
                 aria-hidden

@@ -4,6 +4,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { inViewOnce, reveal, spring, springSnappy, springSoft } from "@/lib/motion";
 import { useState } from "react";
+import Spotlight from "./Spotlight";
 
 type ProjectCardProps = {
   title: string;
@@ -39,8 +40,9 @@ export default function ProjectCard({
         viewport={inViewOnce}
         whileHover={{ y: -6, transition: springSoft }}
         transition={{ ...spring, delay: index * 0.08 }}
-        className="group bg-white/[0.04] backdrop-blur-xl backdrop-saturate-150 border border-white/10 rounded-3xl overflow-hidden shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] hover:bg-white/[0.07] hover:border-white/20 hover:shadow-[0_24px_48px_-12px_rgba(0,0,0,0.6)] transition-[background-color,border-color,box-shadow] duration-300"
+        className="group relative bg-white/[0.04] backdrop-blur-xl backdrop-saturate-150 border border-white/10 rounded-3xl overflow-hidden shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] hover:bg-white/[0.07] hover:border-white/20 hover:shadow-[0_24px_48px_-12px_rgba(0,0,0,0.6)] transition-[background-color,border-color,box-shadow] duration-300"
       >
+        <Spotlight />
         <div className="relative overflow-hidden h-56">
           <img
             src={image}

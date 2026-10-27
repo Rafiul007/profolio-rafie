@@ -2,69 +2,8 @@
 
 import FadeIn from "@/components/FadeIn";
 import GradientText from "@/components/GradientText";
-import TypingText from "@/components/TypingText";
+import BlurWords from "@/components/BlurWords";
 import TiltedCard from "@/components/TiltedCard";
-import TechStackSection from "./tech-stack-section";
-import {
-  SiReact,
-  SiNextdotjs,
-  SiTypescript,
-  SiTailwindcss,
-  SiPrisma,
-  SiGraphql,
-  SiDocker,
-  SiExpress as SiExpressJs,
-} from "react-icons/si";
-
-import { FaNodeJs } from "react-icons/fa";
-
-const techLogos = [
-  {
-    node: <SiReact color="white" />,
-    title: "React",
-    href: "https://react.dev",
-  },
-  {
-    node: <SiNextdotjs color="white" />,
-    title: "Next.js",
-    href: "https://nextjs.org",
-  },
-  {
-    node: <SiTypescript color="white" />,
-    title: "TypeScript",
-    href: "https://www.typescriptlang.org",
-  },
-  {
-    node: <SiTailwindcss color="white" />,
-    title: "Tailwind CSS",
-    href: "https://tailwindcss.com",
-  },
-  {
-    node: <FaNodeJs color="white" />,
-    title: "Node.js",
-    href: "https://nodejs.org",
-  },
-  {
-    node: <SiExpressJs color="white" />,
-    title: "Express.js",
-    href: "https://expressjs.com",
-  },
-  {
-    node: <SiPrisma color="white" />,
-    title: "Prisma",
-    href: "https://www.prisma.io",
-  },
-  {
-    node: <SiGraphql color="white" />,
-    title: "GraphQL",
-    href: "https://graphql.org",
-  },
-  {
-    node: <SiDocker color="white" />,
-    title: "Docker",
-    href: "https://www.docker.com",
-  },
-];
 
 export default function HeroMainSection() {
   return (
@@ -77,20 +16,23 @@ export default function HeroMainSection() {
             </h1>
           </FadeIn>
 
-          <FadeIn delay={200}>
-            <div className="max-w-2xl">
-              <p className="text-xl md:text-2xl text-gray-300 font-light leading-relaxed">
-                <TypingText
-                  text="Full Stack Engineer building scalable web apps with React, Next.js, Node.js, and TypeScript."
-                  speed={50}
-                />
-              </p>
-            </div>
-          </FadeIn>
+          <div className="max-w-2xl">
+            <p className="text-xl md:text-2xl text-gray-300 font-light leading-relaxed">
+              <BlurWords
+                text="Full Stack Engineer building scalable web apps with React, Next.js, Node.js, and TypeScript."
+                delay={0.35}
+              />
+            </p>
+          </div>
         </div>
 
         <FadeIn delay={300}>
-          <div className="flex justify-center md:justify-end">
+          <div className="relative flex justify-center md:justify-end">
+            {/* Soft halo so the photo, not the background, holds the eye */}
+            <div
+              aria-hidden
+              className="pointer-events-none absolute right-0 top-1/2 h-[420px] w-[420px] -translate-y-1/2 rounded-full bg-purple-500/20 blur-[90px] md:-right-6"
+            />
             <TiltedCard
               imageSrc="/profile.png"
               altText="M Rafiul Faisal"
