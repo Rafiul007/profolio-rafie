@@ -46,22 +46,13 @@ export default function FeaturedProjectsSection() {
         "Final year project: a secure, anonymous parcel delivery system focused on privacy and efficient last-mile delivery.",
       tech: ["Full Stack", "Security", "Logistics"],
     },
-    {
-      title: "Portfolio Website",
-      image: "/e-commerce.png",
-      description:
-        "This site: a personal portfolio built with Next.js, GSAP and Three.js animations, and a glassmorphism UI.",
-      tech: ["Next.js", "TypeScript", "Tailwind", "GSAP", "Three.js"],
-      link: "https://rafie007.vercel.app/",
-      github: "https://github.com/Rafiul007/profolio-rafie",
-    },
   ];
 
   return (
     <section className="max-w-[1400px] mx-auto px-6 py-20" id="projects">
       <SectionHeading eyebrow="Selected work" title="Featured" highlight="Projects" className="mb-16" />
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+      <div className="grid md:grid-cols-2 gap-8 lg:gap-10">
         {projects.map((p, idx) => (
           <ProjectCard
             key={idx}
